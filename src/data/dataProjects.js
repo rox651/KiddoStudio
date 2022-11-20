@@ -1,0 +1,24 @@
+export const dataProjects = [
+   [
+      {
+         name: "project1",
+      },
+      {
+         name: "project2",
+      },
+      {
+         name: "project3",
+      },
+   ],
+   [
+      {
+         name: "project4",
+      },
+      {
+         name: "project5",
+      },    
+      {
+         name: "project6",
+      },
+   ],
+];

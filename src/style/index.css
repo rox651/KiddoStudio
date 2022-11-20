@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Cabinet Font */
+
+@font-face {
+   font-family: "CabinetGrotesk-Variable";
+   src: url("../fonts/Cabinet/CabinetGrotesk-Variable.woff2") format("woff2"),
+      url("../fonts/Cabinet/CabinetGrotesk-Variable.woff") format("woff"),
+      url("../fonts/Cabinet/CabinetGrotesk-Variable.ttf") format("truetype");
+   font-weight: 100 900;
+   font-display: swap;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: "CabinetGrotesk-Thin";
+   src: url("../fonts/Cabinet/CabinetGrotesk-Thin.woff2") format("woff2"),
+      url("../fonts/Cabinet/CabinetGrotesk-Thin.woff") format("woff"),
+      url("../fonts/Cabinet/CabinetGrotesk-Thin.ttf") format("truetype");
+   font-weight: 100;
+   font-display: swap;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: "CabinetGrotesk-Extralight";
+   src: url("../fonts/Cabinet/CabinetGrotesk-Extralight.woff2") format("woff2"),
+      url("../fonts/Cabinet/CabinetGrotesk-Extralight.woff") format("woff"),
+      url("../fonts/Cabinet/CabinetGrotesk-Extralight.ttf") format("truetype");
+   font-weight: 200;
+   font-display: swap;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: "CabinetGrotesk-Light";
+   src: url("../fonts/Cabinet/CabinetGrotesk-Light.woff2") format("woff2"),
+      url("../fonts/Cabinet/CabinetGrotesk-Light.woff") format("woff"),
+      url("../fonts/Cabinet/CabinetGrotesk-Light.ttf") format("truetype");
+   font-weight: 300;
+   font-display: swap;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: "CabinetGrotesk-Regular";
+   src: url("../fonts/Cabinet/CabinetGrotesk-Regular.woff2") format("woff2"),
+      url("../fonts/Cabinet/CabinetGrotesk-Regular.woff") format("woff"),
+      url("../fonts/Cabinet/CabinetGrotesk-Regular.ttf") format("truetype");
+   font-weight: 400;
+   font-display: swap;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: "CabinetGrotesk-Medium";
+   src: url("../fonts/Cabinet/CabinetGrotesk-Medium.woff2") format("woff2"),
+      url("../fonts/Cabinet/CabinetGrotesk-Medium.woff") format("woff"),
+      url("../fonts/Cabinet/CabinetGrotesk-Medium.ttf") format("truetype");
+   font-weight: 500;
+   font-display: swap;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: "CabinetGrotesk-Bold";
+   src: url("../fonts/Cabinet/CabinetGrotesk-Bold.woff2") format("woff2"),
+      url("../fonts/Cabinet/CabinetGrotesk-Bold.woff") format("woff"),
+      url("../fonts/Cabinet/CabinetGrotesk-Bold.ttf") format("truetype");
+   font-weight: 700;
+   font-display: swap;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: "CabinetGrotesk-Extrabold";
+   src: url("../fonts/Cabinet/CabinetGrotesk-Extrabold.woff2") format("woff2"),
+      url("../fonts/Cabinet/CabinetGrotesk-Extrabold.woff") format("woff"),
+      url("../fonts/Cabinet/CabinetGrotesk-Extrabold.ttf") format("truetype");
+   font-weight: 800;
+   font-display: swap;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: "CabinetGrotesk-Black";
+   src: url("../fonts/Cabinet/CabinetGrotesk-Black.woff2") format("woff2"),
+      url("../fonts/Cabinet/CabinetGrotesk-Black.woff") format("woff"),
+      url("../fonts/Cabinet/CabinetGrotesk-Black.ttf") format("truetype");
+   font-weight: 900;
+   font-display: swap;
+   font-style: normal;
+}
+
+/* Fixture */
+
+@font-face {
+   font-family: "Fixture";
+   src: url("../fonts/Fixture/AnyConv.com__Fixture-CondensedThin.ttf");
+   font-weight: 100;
+}
+
+@layer base {
+   html {
+      font-family: "CabinetGrotesk-Extralight";
+   }
+}
