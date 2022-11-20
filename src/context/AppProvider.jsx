@@ -1,4 +1,4 @@
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { useFetch } from "../hooks/";
 
@@ -11,7 +11,14 @@ export const AppProvider = ({ children }) => {
    const isDark = useMemo(() => path !== "/" && path !== "/about", [path]);
 
    //-----------------
+   //open or close menu state
+   const [isOpen, setIsOpen] = useState(true);
 
+   const openMenu = () => {
+      setIsOpen(!isOpen);
+   };
+
+   //-------
    //fetch projects API
    const PROJECT_ID = "mx1yrmh1";
    const DATASET = "production";
@@ -23,8 +30,9 @@ export const AppProvider = ({ children }) => {
 
    const { data, isLoading } = useFetch(PROJECT_URL);
 
-   console.log(data);
    const contextValue = {
+      openMenu,
+      isOpen,
       isDark,
       data,
       isLoading,

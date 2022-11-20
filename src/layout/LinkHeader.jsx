@@ -6,10 +6,11 @@ import { AppContext } from "../context";
 
 export const LinkHeader = ({ link }) => {
    const { name, redir } = link;
-   const { isDark } = useContext(AppContext);
+   const { isDark, openMenu } = useContext(AppContext);
 
    return (
       <NavLink
+         onClick={openMenu}
          className={({ isActive }) =>
             isActive
                ? `text-[#DF9EF4] text-center max-w-max relative font-normal  lg:min-h-5 lg:font-semibold lg:px-2 lg:overflow-hidden lg:rounded-xl  lg:border-[1px] lg:border-[#DF9EF4] `

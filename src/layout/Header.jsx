@@ -7,14 +7,7 @@ import { navLinks } from "../data";
 import { Link } from "react-router-dom";
 
 export const Header = () => {
-   const { isDark } = useContext(AppContext);
-
-   //open or close menu state
-   const [isOpen, setIsOpen] = useState(true);
-
-   const openMenu = () => {
-      setIsOpen(!isOpen);
-   };
+   const { isDark, isOpen, openMenu } = useContext(AppContext);
 
    return (
       <header className=" px-5 lg:px-20 py-9 w-full  border-b-2 border-[#70707067]">
@@ -99,7 +92,7 @@ export const Header = () => {
                fill="none"
                viewBox="0 0 24 24"
                strokeWidth={1.5}
-               stroke="currentColor"
+               stroke={isDark ? "#fff" : "#000"}
                className="w-8 h-8 cursor-pointer lg:hidden"
                onClick={openMenu}
             >
