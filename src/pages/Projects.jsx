@@ -17,7 +17,7 @@ export const Projects = () => {
                </h1>
             ))
          )}
-         {/* {dataProjects.map((element, index) => {
+         {dataProjects.map((element, index) => {
             return (
                <section
                   key={index}
@@ -37,7 +37,7 @@ export const Projects = () => {
                   })}
                </section>
             );
-         })} */}
+         })}
       </main>
    );
 };
