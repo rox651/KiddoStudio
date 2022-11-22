@@ -9,7 +9,6 @@ export const AppProvider = ({ children }) => {
    const path = useLocation().pathname;
    //color conditional
    const isDark = useMemo(() => path !== "/" && path !== "/about", [path]);
-
    //-----------------
    //open or close menu state
    const [isOpen, setIsOpen] = useState(true);
