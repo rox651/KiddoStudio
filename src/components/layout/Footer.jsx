@@ -32,7 +32,7 @@ export const Footer = () => {
 
                <div className="flex justify-between mt-20">
                   <BehanceIcon />
-                  <svg
+                  {/* <svg
                      id="_3sAKVP"
                      data-name="3sAKVP"
                      xmlns="http://www.w3.org/2000/svg"
@@ -172,7 +172,7 @@ export const Footer = () => {
                         transform="translate(-574.804 -321.688)"
                         fill="#fff"
                      />
-                  </svg>
+                  </svg> */}
                </div>
             </article>
          </section>
