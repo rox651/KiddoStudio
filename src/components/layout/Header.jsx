@@ -1,9 +1,9 @@
-import { useState, useContext } from "react";
+import { useContext } from "react";
 import { clsx } from "clsx";
 
-import { AppContext } from "../context";
+import { AppContext } from "../../context";
 import { LinkHeader } from "./";
-import { navLinks } from "../data";
+import { navLinks } from "../../data";
 import { Link } from "react-router-dom";
 
 export const Header = () => {

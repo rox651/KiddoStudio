@@ -31,6 +31,7 @@ export const AppProvider = ({ children }) => {
    const { data, isLoading } = useFetch(PROJECT_URL);
 
    const contextValue = {
+      path,
       openMenu,
       isOpen,
       isDark,

@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { BsArrowRightShort } from "react-icons/bs";
 
-import { AppContext } from "../context";
+import { AppContext } from "../../context";
 
 export const LinkHeader = ({ link }) => {
    const { name, redir } = link;
