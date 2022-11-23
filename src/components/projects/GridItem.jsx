@@ -8,26 +8,15 @@ export const GridItem = ({ project, index }) => {
 
    const gridPrincipal = (
       <div
-         className={`col-span-1 row-span-2  bg-[url(${urlFor(
-            image
-         ).url()})]  bg-cover bg-center text-white w-full min-h-[400px]  lg:h-[600px] lg:mb-5`}
+         className={`col-span-1 row-span-2  text-white w-full min-h-[400px]  lg:h-[600px] lg:mb-5`}
       >
-         <h3>{name}</h3>
-         <p></p>
+         <img src={urlFor(image).url()} className="h-full w-full object-cover" alt="" />
       </div>
    );
 
    const gridDefault = (
-      <div
-         className={clsx(
-            isDivisble && "lg:mb-5",
-            ` bg-[url(${urlFor(
-               image
-            ).url()})] bg-cover bg-center text-white   w-full h-[400px]  lg:h-auto `
-         )}
-      >
-         <h3>{name}</h3>
-         <p></p>
+      <div className={clsx(isDivisble && "lg:mb-5", `text-white   w-full h-[400px]  lg:h-[296px] `)}>
+         <img src={urlFor(image).url()} className="h-full w-full object-cover" alt="" />
       </div>
    );
 
