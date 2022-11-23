@@ -1,11 +1,16 @@
 import { useEffect, useState } from "react";
+import { client } from "../lib/sanity";
 
-export const useFetch = url => {
+export const useFetch = (query, params) => {
    const [state, setState] = useState({
       data: null,
       isLoading: true,
       hasError: null,
    });
+
+   const [data, setData] = useState(null);
+   const [isLoading, setLoading] = useState(true);
+   const [hasError, setHasError] = useState(null);
 
    const getFetch = async () => {
       setState({
@@ -13,8 +18,7 @@ export const useFetch = url => {
          isLoading: true,
       });
 
-      const resp = await fetch(url);
-      const data = await resp.json();
+      const data = await client.fetch(query, params);
 
       setState({
          data,
@@ -25,7 +29,7 @@ export const useFetch = url => {
 
    useEffect(() => {
       getFetch();
-   }, [url]);
+   }, [query, params]);
 
    return {
       data: state.data || {},

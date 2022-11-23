@@ -1,7 +1,7 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useLocation } from "react-router-dom";
-import { useFetch } from "../hooks/";
 
+import { client } from "../lib/sanity";
 import { AppContext } from "./AppContext";
 
 export const AppProvider = ({ children }) => {
@@ -9,7 +9,6 @@ export const AppProvider = ({ children }) => {
    const path = useLocation().pathname;
    //color conditional
    const isDark = useMemo(() => path !== "/" && path !== "/about", [path]);
-   //-----------------
    //open or close menu state
    const [isOpen, setIsOpen] = useState(true);
 
@@ -17,25 +16,11 @@ export const AppProvider = ({ children }) => {
       setIsOpen(!isOpen);
    };
 
-   //-------
-   //fetch projects API
-   const PROJECT_ID = "mx1yrmh1";
-   const DATASET = "production";
-
-   let QUERY = encodeURIComponent('*[_type == "product"]');
-
-   // Compose the URL for your project's endpoint and add the query
-   let PROJECT_URL = `https://${PROJECT_ID}.api.sanity.io/v2021-10-21/data/query/${DATASET}?query=${QUERY}`;
-
-   const { data, isLoading } = useFetch(PROJECT_URL);
-
    const contextValue = {
       path,
       openMenu,
       isOpen,
       isDark,
-      data,
-      isLoading,
    };
 
    return <AppContext.Provider value={contextValue}>{children}</AppContext.Provider>;
