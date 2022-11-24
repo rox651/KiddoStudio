@@ -5,14 +5,14 @@ export const navLinks = [
    },
    {
       name: "Projects",
-      redir: "projects",
+      redir: "/projects",
    },
    {
       name: "Kiddo?",
-      redir: "about",
+      redir: "/about",
    },
    {
       name: "Get in touch",
-      redir: "getin",
+      redir: "/getin",
    },
 ];

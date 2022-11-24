@@ -2,29 +2,19 @@ import { useEffect, useState } from "react";
 import { client } from "../lib/sanity";
 
 export const useFetch = (query, params) => {
-   const [state, setState] = useState({
-      data: null,
-      isLoading: true,
-      hasError: null,
-   });
-
    const [data, setData] = useState(null);
    const [isLoading, setLoading] = useState(true);
    const [hasError, setHasError] = useState(null);
 
    const getFetch = async () => {
-      setState({
-         ...state,
-         isLoading: true,
-      });
+      setLoading(true);
 
       const data = await client.fetch(query, params);
 
-      setState({
-         data,
-         isLoading: false,
-         hasError: null,
-      });
+      setTimeout(() => {
+         setData(data);
+         setLoading(false);
+      }, 1000);
    };
 
    useEffect(() => {
@@ -32,8 +22,8 @@ export const useFetch = (query, params) => {
    }, [query, params]);
 
    return {
-      data: state.data || {},
-      isLoading: state.isLoading,
-      hasError: state.hasError,
+      data: data || {},
+      isLoading: isLoading,
+      hasError: hasError,
    };
 };

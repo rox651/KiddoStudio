@@ -1,9 +1,13 @@
-import { GridProject } from "../components/projects/GridProject";
+import clsx from "clsx";
+import { Outlet, useLocation } from "react-router-dom";
+import { GridProject } from "../components/";
 
 export const Projects = () => {
+   const path = useLocation().pathname;
+
    return (
-      <main className="px-5 lg:px-20 ">
-         <GridProject />
+      <main className={clsx(path == "/projects" && "lg:px-20 ")}>
+         <Outlet />
       </main>
    );
 };
