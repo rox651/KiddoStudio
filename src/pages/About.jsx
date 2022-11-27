@@ -4,7 +4,7 @@ export const About = () => {
    return (
       <>
          <SEO title={"Kiddo?"} description={""} />
-         <h1>About</h1>
+         <h1>Kiddo?</h1>
       </>
    );
 };
