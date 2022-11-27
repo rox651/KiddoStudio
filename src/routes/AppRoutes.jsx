@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import { Home, About, Projects } from "../pages";
+import { Home, About, Projects, GetInTouch } from "../pages";
 import { GridProject, Project } from "../components";
 
 export const AppRoutes = () => {
@@ -11,6 +11,7 @@ export const AppRoutes = () => {
             <Route index element={<GridProject />} />
             <Route path=":slug" element={<Project />} />
          </Route>
+         <Route path="getin" element={<GetInTouch />} />
       </Routes>
    );
 };
