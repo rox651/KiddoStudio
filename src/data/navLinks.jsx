@@ -32,7 +32,7 @@ export const navLinks = [
    },
    {
       name: "Get in touch",
-      redir: "/getin",
+      redir: "/contact",
       phrase: {
          title: "Get in touch",
          text: (

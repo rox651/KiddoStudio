@@ -11,7 +11,7 @@ export const AppRoutes = () => {
             <Route index element={<GridProject />} />
             <Route path=":slug" element={<Project />} />
          </Route>
-         <Route path="getin" element={<GetInTouch />} />
+         <Route path="contact" element={<GetInTouch />} />
       </Routes>
    );
 };

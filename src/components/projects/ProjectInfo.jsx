@@ -1,6 +1,7 @@
 import clsx from "clsx";
 import { useState } from "react";
 import { urlFor } from "../../lib/sanity";
+import { SEO } from "../common";
 
 export const ProjectInfo = ({ data }) => {
    const { name, images, description } = data[0];
@@ -12,6 +13,7 @@ export const ProjectInfo = ({ data }) => {
    };
    return (
       <>
+         <SEO title={`${name} | Kiddo Studio`} description={description}/>
          {images &&
             images.map((image, index) => {
                return (
@@ -42,8 +44,12 @@ export const ProjectInfo = ({ data }) => {
                onClick={toggleModal}
                className="inset-0 absolute w-full h-full bg-[#000000e6] z-0"
             ></span>
-            <h2 className="font-[Fixture] text-7xl lg:text-[9rem] mb-3 relative z-20 max-w-max">{name}</h2>
-            <p className=" text-base lg:text-lg leading-loose lg:leading-normal relative z-20">{description}</p>
+            <h2 className="font-[Fixture] text-7xl lg:text-[9rem] mb-3 relative z-20 max-w-max">
+               {name}
+            </h2>
+            <p className=" text-base lg:text-lg leading-loose lg:leading-normal relative z-20">
+               {description}
+            </p>
          </div>
       </>
    );

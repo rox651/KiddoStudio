@@ -10,7 +10,7 @@ export const Logo = () => {
          width="128.827"
          height="37.55"
          viewBox="0 0 128.827 37.55"
-         className=" cursor-pointer"
+         className=" cursor-pointer transition-colors hover:fill-[#DF9EF4]"
          fill={isDark ? "#fff" : "#000"}
       >
          <g id="Grupo_131" data-name="Grupo 131" transform="translate(-253.07 -451.141)">

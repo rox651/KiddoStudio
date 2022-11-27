@@ -9,7 +9,7 @@ export const Hero = () => {
                <img className="" src="" alt="gif" />
             </article>
             <article className="order-1 md:order-2">
-               <h2 className=" relative text-[8rem]  transition-colors hover:text-[#DF9EF4] group leading-[0.7] font-[Fixture] lg:text-[12rem]   xl:text-[16rem]">
+               <h2 className=" relative text-[8rem]  transition-colors hover:text-[#DF9EF4] group leading-[0.7] font-[Fixture] lg:text-[12rem]   xl:text-[15.5rem]">
                   <Link to="/projects">
                      Let’s
                      <span className="absolute text-4xl top-14 left-36 font-light h-24 overflow-y-clip lg:top-16 lg:left-52  lg:text-7xl xl:text-8xl xl:top-24 xl:left-64  ">

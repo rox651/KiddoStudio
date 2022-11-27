@@ -1,6 +1,10 @@
+import { HeroContact, SEO } from "../components";
 
 export const GetInTouch = () => {
-  return (
-    <div>GetInTouch</div>
-  )
-}
+   return (
+      <>
+         <SEO title={"Get in Touch"} description={""} />
+         <HeroContact />
+      </>
+   );
+};

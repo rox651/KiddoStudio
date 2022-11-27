@@ -1,14 +1,14 @@
 import { useContext, useMemo } from "react";
+import { Link, useLocation } from "react-router-dom";
 import { clsx } from "clsx";
 
 import { AppContext } from "../../context";
-import { LinkHeader } from "./";
 import { navLinks } from "../../data";
-import { Link, useLocation } from "react-router-dom";
 import { Bars, Logo, Xmark } from "../common";
+import { LinkHeader } from "./";
 
 export const Header = () => {
-   const { isDark, isOpen, openMenu } = useContext(AppContext);
+   const { isDark, isOpen } = useContext(AppContext);
 
    const path = useLocation().pathname;
    const isValidPath = useMemo(

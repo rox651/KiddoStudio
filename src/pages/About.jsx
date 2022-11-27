@@ -1,3 +1,9 @@
+import { SEO } from "../components";
+
 export const About = () => {
-   return <div>About</div>;
+   return (
+      <>
+         <SEO title={"Kiddo?"} description={""} />
+      </>
+   );
 };

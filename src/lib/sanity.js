@@ -2,8 +2,8 @@ import sanityClient from "@sanity/client";
 import imageUrlBuilder from "@sanity/image-url";
 
 export const client = sanityClient({
-   projectId: "mx1yrmh1",
-   dataset: "production",
+   projectId: import.meta.env.VITE_PROJECT_ID,
+   dataset: import.meta.env.VITE_DATASET,
    useCdn: true, // `false` if you want to ensure fresh data
 });
 
