@@ -22,8 +22,8 @@ export const Header = () => {
          <header
             className={clsx(
                !isValidPath && "lg:hidden",
-               path === "/" && " border-[#70707067] border-b-2",
-               " px-5 lg:px-20 pt-12 pb-8 w-full   "
+               path === "/" && " border-[#70707067] border-b-2 pb-8",
+               " px-5 lg:px-20 pt-12  w-full   "
             )}
          >
             <div className="max-w-7xl mx-auto flex justify-between items-center relative">
