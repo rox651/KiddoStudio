@@ -6,7 +6,7 @@ export const Hero = () => {
       <section className=" px-5 h-[70vh] lg:px-20 md:h-[70vh]">
          <div className=" max-w-7xl h-full  grid sm:mx-auto sm:justify-center  md:grid-cols-2  lg:justify-start items-center ">
             <article className=" order-2 md:order-1">
-               <img className="" src="" alt="gif" />
+               {/* <img className="" src="" alt="gif" /> */}
             </article>
             <article className="order-1 md:order-2">
                <h2 className=" relative text-[8rem]  transition-colors hover:text-[#DF9EF4] group leading-[0.7] font-[Fixture] lg:text-[12rem]   xl:text-[15.5rem]">

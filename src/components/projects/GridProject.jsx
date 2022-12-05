@@ -1,6 +1,7 @@
 import { clsx } from "clsx";
 import { formatData, orderData } from "../../helpers";
 import { useFetch } from "../../hooks/";
+import { MotionRoute } from "../common";
 import { GridItem } from "./";
 import { GridLoading } from "./";
 
@@ -11,11 +12,11 @@ export const GridProject = () => {
       "before:absolute before:inset-0 before:-translate-x-full before:bg-gradient-to-r before:from-transparent before:via-white/20 hover:shadow-lg overflow-hidden before:animate-[shimmer_0.8s_infinite]";
 
    return (
-      <>
+      <MotionRoute>
          <section
             className={clsx(
                isLoading && skeletonClass,
-               "max-w-7xl mx-auto grid lg:grid-cols-2 gap-6 lg:gap-2  mt-8 relative "
+               "max-w-7xl mx-auto pt-10 lg:py-0 grid lg:grid-cols-2 gap-6 lg:gap-2  mt-8 relative "
             )}
          >
             <h1
@@ -35,6 +36,6 @@ export const GridProject = () => {
                ))
             )}
          </section>
-      </>
+      </MotionRoute>
    );
 };

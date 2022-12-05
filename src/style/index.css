@@ -107,3 +107,21 @@
       font-family: "CabinetGrotesk-Extralight";
    }
 }
+
+.bgText {
+   background-image: url(../assets/text-img.png);
+}
+
+.bgTextFooter {
+   background-image: url(../assets/text-footer.png);
+}
+
+@media (max-width: 1024px) {
+   .bgText {
+      background-image: url(../assets/text-mobile-img.png);
+   }
+
+   .bgTextFooter {
+      background-image: url(../assets/text-footer-mobile.png);
+   }
+}

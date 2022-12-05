@@ -1,13 +1,12 @@
-import { useContext, useEffect } from "react";
+import clsx from "clsx";
 
+import { useContext, useEffect } from "react";
 import { AppContext } from "./context/";
 import { AppRoutes } from "./routes/AppRoutes";
 import { Footer, Header } from "./components";
-import clsx from "clsx";
 import { useLocation } from "react-router-dom";
 
 export const App = () => {
-
    const { isDark } = useContext(AppContext);
    const path = useLocation().pathname;
 
@@ -15,9 +14,15 @@ export const App = () => {
       window.scrollTo(0, 0);
    }, [path]);
    return (
-      <div className={clsx(isDark && "bg-black", `relative min-h-screen`)}>
+      <div
+         className={clsx(
+            isDark && "bg-black",
+            ` transition-colors duration-700 relative min-h-screen  overflow-hidden`
+         )}
+      >
          <Header />
          <AppRoutes />
+
          {path !== "/" && <Footer />}
       </div>
    );

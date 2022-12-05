@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { AppContext } from "../../../context";
 
 export const Logo = () => {
-   const { isDark} = useContext(AppContext);
+   const { isDark } = useContext(AppContext);
 
    return (
       <svg
@@ -10,7 +10,7 @@ export const Logo = () => {
          width="128.827"
          height="37.55"
          viewBox="0 0 128.827 37.55"
-         className=" cursor-pointer transition-colors hover:fill-[#DF9EF4]"
+         className=" cursor-pointer "
          fill={isDark ? "#fff" : "#000"}
       >
          <g id="Grupo_131" data-name="Grupo 131" transform="translate(-253.07 -451.141)">
